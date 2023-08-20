@@ -1,6 +1,6 @@
 <tr id="<%= dom_id import %>">
   <td class="my-5">
-    <%= import.filename %>
+    <%= link_to import.filename || 'Filename not found', import.file_url %>
   </td>
 
   <td class="my-5">

@@ -8,8 +8,9 @@ class Import < ApplicationRecord
 
   ## Instance methods
 
-#   def filename
-#     File.basename(self.file)
-#   end
+  def file_url
+    ActiveStorage::Current.url_options = Rails.application.credentials.fetch(:APP) # quik workround
+    file.url
+  end
 
 end
