@@ -25,6 +25,7 @@ class ImportsController < ApplicationController
 
     respond_to do |format|
       if @import.save
+        ImportMenuJob.perform_later @import
         format.html { redirect_to import_url(@import), notice: "Import was successfully created." }
         format.json { render :show, status: :created, location: @import }
       else
