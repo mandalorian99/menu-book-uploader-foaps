@@ -12,7 +12,9 @@
   </td>
 
   <td class="my-5">
-    <%= import.status %>
+    <span id=<%= "job-status-#{import.id}"%>>
+      <%= import.send :status_codes, import.status || :aborted %>
+    </span>
   </td>
 
   <td class="my-5">
