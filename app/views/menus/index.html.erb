@@ -3,12 +3,22 @@
 <h1>Menus</h1>
 
 <div id="menus">
-  <% @menus.each do |menu| %>
-    <%= render menu %>
-    <p>
-      <%= link_to "Show this menu", menu %>
-    </p>
-  <% end %>
+<table class="table-fixed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Dish Type</th>
+      <th>Allergens</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @menus %>
+  </tbody>
+  </table>
 </div>
 
 <%= link_to "New menu", new_menu_path %>

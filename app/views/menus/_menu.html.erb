@@ -1,32 +1,29 @@
-<div id="<%= dom_id menu %>">
-  <p>
-    <strong>Name:</strong>
+<tr id="<%= dom_id menu %>">
+  <td class="text-center">
     <%= menu.name %>
-  </p>
+  </td>
 
-  <p>
-    <strong>Description:</strong>
+  <td class="text-center">
     <%= menu.description %>
-  </p>
+  </td>
 
-  <p>
-    <strong>Dish type:</strong>
+  <td class="text-center">
     <%= menu.dish_type %>
-  </p>
+  </td>
 
-  <p>
-    <strong>Allergens:</strong>
+  <td class="text-center">
     <%= menu.allergens %>
-  </p>
+  </td>
 
-  <p>
-    <strong>Category:</strong>
+  <td class="text-center">
     <%= menu.category %>
-  </p>
+  </td>
 
-  <p>
-    <strong>Price:</strong>
+  <td class="text-center">
     <%= menu.price %>
-  </p>
+  </td>
 
-</div>
+  <td>
+    <strong><%= link_to "Show", menu %></strong>
+  </td>
+</tr>
