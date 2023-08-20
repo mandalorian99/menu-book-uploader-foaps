@@ -65,6 +65,13 @@ class ImportsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def import_params
+      ## could be abstract to seprate ruby class
+      attachment = params[:import][:file]
+      params[:import][:filename] = attachment.original_filename
+      params[:import][:size] = attachment.size
+      params[:import][:file_type] = 'csv'
+      params[:import][:status] = 'started'
+
       params.require(:import).permit(:filename, :size, :file_type, :status, :total_rows, :start_at, :finished_at, :meta, :file)
     end
 end
