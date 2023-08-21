@@ -7,7 +7,7 @@ class Import < ApplicationRecord
   enum :status, [:started, :processing, :finished, :aborted]
 
   ## Callbacks
-  after_commit :broadcast_job_status
+  after_commit :broadcast_job_status, on: :update
 
   ## Instance methods
 

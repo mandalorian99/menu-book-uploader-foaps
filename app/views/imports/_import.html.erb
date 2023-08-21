@@ -22,15 +22,15 @@
   </td>
 
   <td class="my-5">
-    <%= import.start_at %>
+    <%= import.start_at&.strftime("%T") %>
   </td>
 
   <td class="my-5">
-    <%= import.finished_at %>
+    <%= import.finished_at&.strftime("%T") %>
   </td>
 
   <td class="my-5">
-    <%= import.meta %>
+    <%= import.meta&.fetch('error')&.truncate(10) %>
   </td>
 
   <td>
