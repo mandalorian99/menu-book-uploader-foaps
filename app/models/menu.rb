@@ -1,3 +1,3 @@
 class Menu < ApplicationRecord
-  enum dish_type: ['veg', 'nonveg']
+  enum dish_type: ['Main Course', 'Salad', 'Dessert' ,'Veg', 'Nonveg']
 end
