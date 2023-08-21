@@ -1,14 +1,16 @@
 # README
 ### Screenshots 
 1. Dedicate importer with live status of job
-![image](https://github.com/mandalorian99/menu-book-uploader-foaps/assets/35068786/f5d91292-8e92-4305-ae92-e353e9654c6a)
+   ![image](https://github.com/mandalorian99/menu-book-uploader-foaps/assets/35068786/88c603da-c7ea-4eff-bea0-c03411d5ff28) 
 
 
 2. Log error and backtrace
-![image](https://github.com/mandalorian99/menu-book-uploader-foaps/assets/35068786/4969a828-50b0-46b1-b769-436f3054d308)
+![image](https://github.com/mandalorian99/menu-book-uploader-foaps/assets/35068786/62bc58b9-c977-4c02-9020-1b9bf3f24f26)
+
 
 3. Menu list
-![image](https://github.com/mandalorian99/menu-book-uploader-foaps/assets/35068786/0900382b-5876-479d-8b03-4a8211300206)
+![image](https://github.com/mandalorian99/menu-book-uploader-foaps/assets/35068786/ea702b4f-e4e2-42f2-8aa2-8841b3039449)
+
 
 ### Dependencies & versions
 
