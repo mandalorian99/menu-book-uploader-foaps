@@ -1,0 +1,43 @@
+<tr id="<%= dom_id import %>">
+  <td class="my-5">
+    <%= link_to import.filename || 'Filename not found', import.file_url %>
+  </td>
+
+  <td class="my-5">
+    <%= import.size %>
+  </td>
+
+  <td class="my-5">
+    <%= import.file_type %>
+  </td>
+
+  <td class="my-5">
+    <span id=<%= "job-status-#{import.id}"%>>
+      <%= import.send :status_codes, import.status || :aborted %>
+    </span>
+  </td>
+
+  <td class="my-5">
+    <%= import.total_rows %>
+  </td>
+
+  <td class="my-5">
+    <%= import.start_at&.strftime("%T") %>
+  </td>
+
+  <td class="my-5">
+    <%= import.finished_at&.strftime("%T") %>
+  </td>
+
+  <td class="my-5">
+    <%= import.meta&.fetch('error')&.truncate(10) %>
+  </td>
+
+  <td>
+    <%= link_to "view", import, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>  
+  </td>
+
+  <td>
+    <%= link_to 'edit', edit_import_path(import), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+  </td>
+</tr>
