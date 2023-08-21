@@ -1,4 +1,8 @@
 # README
+
+### Demo
+loom: https://www.loom.com/share/e4abbfe7206e4455842c465ba7b4d1ea?sid=7779d15e-cd5b-4787-b917-aab433f25562
+
 ### Screenshots 
 1. Dedicate importer with live status of job
    ![image](https://github.com/mandalorian99/menu-book-uploader-foaps/assets/35068786/88c603da-c7ea-4eff-bea0-c03411d5ff28) 
