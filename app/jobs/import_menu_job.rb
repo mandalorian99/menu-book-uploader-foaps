@@ -5,6 +5,7 @@ class ImportMenuJob < ApplicationJob
 
   def perform(import)
     Rails.logger.debug "+++++++++++++++STARTING IMPORTER++++++++++++++"
+    menu_itmes = []
     blob = import.file
 
     begin
@@ -13,7 +14,8 @@ class ImportMenuJob < ApplicationJob
         row_count = csv.size
         import.update(status: 'processing', total_rows: row_count)
         csv.each_with_index do |row, index|
-          ## parse csv and insert into db 
+          menu_itmes << { name: row['dish_name'], description: row['dish_description'], dish_type: row['dish_type'], allergens: row['allergens'], category: row['Category'], price: row['Price'] }
+          Menu.insert_all(menu_itmes)
         end
       end
     rescue StandardError => e
@@ -22,8 +24,9 @@ class ImportMenuJob < ApplicationJob
       return
     end
 
+    sleep(5)
     import.update(status: 'finished', finished_at: DateTime.now)
-
+    Rails.logger.info "+++++++++++++Imported #{menu_itmes.count} items succesully out of #{import.total_rows}"
   end
 
 
