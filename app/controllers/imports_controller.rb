@@ -25,7 +25,7 @@ class ImportsController < ApplicationController
 
     respond_to do |format|
       if @import.save
-        ImportMenuJob.perform_later @import
+        ImportMenuJob.set(wait: 10.seconds).perform_later @import
         format.html { redirect_to import_url(@import), notice: "Import was successfully created." }
         format.json { render :show, status: :created, location: @import }
       else
@@ -72,6 +72,7 @@ class ImportsController < ApplicationController
       params[:import][:size] = attachment.size
       params[:import][:file_type] = 'csv'
       params[:import][:status] = 'started'
+      params[:import][:start_at] = DateTime.now
 
       params.require(:import).permit(:filename, :size, :file_type, :status, :total_rows, :start_at, :finished_at, :meta, :file)
     end
