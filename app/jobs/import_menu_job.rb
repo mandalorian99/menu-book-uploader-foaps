@@ -14,6 +14,7 @@ class ImportMenuJob < ApplicationJob
         row_count = csv.size
         import.update(status: 'processing', total_rows: row_count)
         csv.each_with_index do |row, index|
+          Rails.logger.info "==> uploading: #{calc_progress(index, row_count)} %"
           menu_itmes << { name: row['dish_name'], description: row['dish_description'], dish_type: row['dish_type'], allergens: row['allergens'], category: row['Category'], price: row['Price'] }
           Menu.insert_all(menu_itmes)
         end
