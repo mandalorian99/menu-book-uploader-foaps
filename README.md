@@ -1,8 +1,6 @@
 # README
 ### Demo Loom 
-Demo of Assignment - Watch Video
-<iframe src="https://www.loom.com/embed/e4abbfe7206e4455842c465ba7b4d1ea?sid=3746e859-5fa4-4283-a648-ebffc0ff89df" frameborder="0" allowfullscreen="true"></iframe>
-
+https://www.loom.com/share/e4abbfe7206e4455842c465ba7b4d1ea?sid=11ed3e63-9da2-4537-a052-8c06eb05143e
 
 ### Screenshots 
 1. Dedicate importer with live status of job
